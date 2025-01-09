@@ -1,0 +1,36 @@
+.product-detail {
+    width: 360px;
+    height: calc(100vh - 68px);
+    top: 68px;
+    z-index: 100;
+}
+
+/* Estilos para el scroll */
+.product-detail .overflow-y-auto {
+    /* Añadir el estilo para el scroll */
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #3f4c5a #f0f0f0;
+    /* Firefox */
+}
+
+/* Estilo para el scrollbar en Webkit (Chrome/Safari) */
+.product-detail .overflow-y-auto::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.product-detail .overflow-y-auto::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.product-detail .overflow-y-auto::-webkit-scrollbar-thumb {
+    background-color: #3e5168;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-detail .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background-color: #3b5974;
+}
