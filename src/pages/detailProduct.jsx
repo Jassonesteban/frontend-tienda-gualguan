@@ -22,7 +22,7 @@ const ProductDetail = () => {
                 <h2 className="font-semibold text-lg text-gray-700">Detalles del producto</h2>
                 <button
                     className="p-2 rounded-full hover:bg-gray-200 transition"
-                    onClick={context.closeDetailProduct}
+                    onClick={() => context.closeDetailProduct()}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

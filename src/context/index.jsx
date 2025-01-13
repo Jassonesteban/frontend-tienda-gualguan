@@ -12,8 +12,14 @@ export const ShoppingCartProvider = ({ children }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [ismobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    const [carProducts, setcarProducts] = useState([]);
+    const [isCheckoutProductsOpen, seIsCheckoutProductsOpen] = useState(false);
+
     const openDetailProduct = () => setisDetailProductOpen(true);
     const closeDetailProduct = () => setisDetailProductOpen(false);
+
+    const openCheckoutProducts = () => seIsCheckoutProductsOpen(true);
+    const closeCheckoutProducts = () => seIsCheckoutProductsOpen(false);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
@@ -25,7 +31,7 @@ export const ShoppingCartProvider = ({ children }) => {
     return (
         <ShoppingCartContext.Provider value={{ count, setCount, openDetailProduct, closeDetailProduct, isDetailProductOpen,
             productToShow, setProductToShow, openModal, closeModal, isModalOpen, ismobileMenuOpen, setMobileMenuOpen,
-            openMobileMenu, closeMobileMenu
+            openMobileMenu, closeMobileMenu, carProducts, setcarProducts, isCheckoutProductsOpen, openCheckoutProducts, closeCheckoutProducts
          }}>
             {children}
         </ShoppingCartContext.Provider>
